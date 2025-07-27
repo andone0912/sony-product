@@ -7,6 +7,7 @@
 
 html{
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body{
@@ -230,9 +231,6 @@ h2{
   gap: 16px;
 }
 
-.hidden-button{
-  display: none;
-}
 
 .watch-video > span:nth-child(1){
   font-family: "Lato", sans-serif;
@@ -259,23 +257,27 @@ h2{
 
 }
 
-.headphones-view > span:nth-child(1),.headphones-view > span:nth-child(3){
+.headphones-view > span:nth-child(1),.headphones-view > span:nth-child(5){
   width: 57px;
   height: 54px;
   background-color: #C0BBFF;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 87px;
+  margin-bottom: 85px;
 }
 .headphones-view > span:nth-child(1){
   border-radius: 0px 3rem 3rem 0px;
-  padding-right: 15px;
+  padding-right: 19px;
 }
-.headphones-view > span:nth-child(3){
+.headphones-view > span:nth-child(5){
   border-radius: 3rem 0px 0px 3rem;
   padding-left: 14px;
-  width: 62px;
+  width: 64px;
+}
+
+.hidden-pictures{
+  display: none;
 }
 
 .preview-container{
@@ -297,7 +299,7 @@ h2{
 .information{
   width: 724px;
   position: relative;
-  bottom: 50px;
+  bottom: 49px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -306,7 +308,7 @@ h2{
 .information > div{
   display: flex;
   flex-direction: column;
-  margin-right: 1px;
+  margin-right: 5px;
 }
 
 .information > div > span{
@@ -318,6 +320,23 @@ h2{
 
 .information > div > span:nth-child(2){
   color: #3B2DDE;
+}
+
+footer{
+  margin-top: 10px;
+  color: #888;
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width:1440px) {
+  .wrapper{
+    width: 1440px;
+  }
+  
 }
 
 /*fluid media query*/
@@ -356,7 +375,7 @@ h2{
   }
 
   .watch-video{
-    margin: 170px 0 0 38%;
+    margin: 170px auto 0 auto;
   }
 
 
@@ -415,6 +434,10 @@ h2{
   .information{
     width: 100%;
   }
+
+  .preview-container > span:nth-child(1){
+  left: 30px;
+}
 }
 
 /* Tablet*/ 
@@ -458,8 +481,37 @@ h2{
   h1, h2{
     text-align: center;
   }
+
+  .headphones-view{
+    flex-direction: column;
+  }
   
+  .headphones-view > span:nth-child(1), .headphones-view > span:nth-child(5) {
+    transform: rotate(90deg);
+    border-radius: 50%;
+    margin: 0;
+    width: 57px;
+    
+    
+  }
+
+  .headphones-view > span:nth-child(1){
+    padding-left: 10px;
+  }
+  .headphones-view > span:nth-child(5){
+    padding-right: 10px;
+  }
   
+  .preview-container{
+    display: none;
+  }
+
+  .information{
+    position:initial;
+    bottom: 0px;
+    margin-top: 25px;
+
+  }
   
 }
 /*Small Mobile*/
