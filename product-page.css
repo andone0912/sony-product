@@ -514,9 +514,9 @@ footer{
   }
 
   .hidden-pictures{
-    display: initial;
-    width: 125px;
-    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .preview-container{
@@ -526,12 +526,88 @@ footer{
   .information{
     position:initial;
     bottom: 0px;
-    margin-top: 25px;
+    margin: 25px 0 25px 0;
+  }
 
+  footer{
+    text-align: center;
   }
   
 }
 /*Small Mobile*/
-@media (max-width: 480px) {
+@media (max-width: 640px) {
+
+  .watch-video{
+    margin: 0 auto 0 auto;
+    position: absolute;
+    top: 84.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .headphones-view{
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .headphones-view > span:nth-child(3){
+    scale: 0.8;
+  }
+  .headphones-view > span:nth-child(2){
+    position: relative;
+    top:30px;
+  }
+  .headphones-view > span:nth-child(4){
+    position: relative;
+    bottom:30px;
+  }
   
+  .description-container{
+    margin: 80px auto 0 auto;
+    flex-direction: column-reverse;
+
+  }
+
+  .description-container > .description > p{
+    width: 100%;
+    text-align: center;
+    height: fit-content;
+  }
+  .vertical-bar{
+    transform: rotate(90deg);
+    margin: 0;
+  }
+  
+  .hide{
+    display: none;
+  }
+
+}
+
+/*picture tweaks*/
+@media (max-width:510px) {
+
+  .headphones-view > span:nth-child(3){
+    scale: 0.7;
+  }
+
+  .headphones-view{
+    gap: 5px;
+  }
+}
+
+@media (max-width:440px) {
+  .headphones-view > span:nth-child(3){
+    scale: 0.6;
+  }
+
+   .headphones-view > span:nth-child(2), .headphones-view > span:nth-child(4){
+    scale: 0.9;
+  }
+
+   .headphones-view > span:nth-child(2){
+    top:40px;
+  }
+  .headphones-view > span:nth-child(4){
+    bottom:40px;
+  }
 }
