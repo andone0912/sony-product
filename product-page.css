@@ -484,22 +484,39 @@ footer{
 
   .headphones-view{
     flex-direction: column;
+    margin-top: 40px;
+    gap: 20px;
   }
   
   .headphones-view > span:nth-child(1), .headphones-view > span:nth-child(5) {
     transform: rotate(90deg);
-    border-radius: 50%;
+    border-radius:50%;
     margin: 0;
     width: 57px;
-    
-    
+    background-color: #ffffff;
+    border: #C0BBFF 3px solid;
   }
 
+  .headphones-view > span:nth-child(2), .headphones-view > span:nth-child(3), .headphones-view > span:nth-child(4){
+    border: #C0BBFF solid 3px;
+    border-radius: 30px;
+  }
+  .headphones-view > span:nth-child(3) > img{
+    border-radius: 30px;
+  }
+
+
   .headphones-view > span:nth-child(1){
-    padding-left: 10px;
+    padding-left: 15px;
   }
   .headphones-view > span:nth-child(5){
     padding-right: 10px;
+  }
+
+  .hidden-pictures{
+    display: initial;
+    width: 125px;
+    height: 92px;
   }
   
   .preview-container{
