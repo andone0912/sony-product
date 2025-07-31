@@ -537,10 +537,15 @@ footer{
 /*Small Mobile*/
 @media (max-width: 640px) {
 
+
+  .hero-content{
+    position: relative;
+  }
+
   .watch-video{
     margin: 0 auto 0 auto;
     position: absolute;
-    top: 96%;
+    top: 101%;
     left: 50%;
     transform: translate(-50%, -50%);
     
