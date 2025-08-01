@@ -11,6 +11,7 @@ html{
 }
 
 body{
+  overflow-x: hidden;
   background-color: #ebe8e8;
 }
 
@@ -484,6 +485,7 @@ footer{
 
   .headphones-view{
     flex-direction: column;
+    align-items: center;
     margin-top: 40px;
     gap: 20px;
   }
@@ -614,5 +616,39 @@ footer{
   }
   .headphones-view > span:nth-child(4){
     bottom:40px;
+  }
+
+  .caption > div:nth-child(2){
+    display: none;
+  }
+
+  .caption{
+    justify-content: center;
+  }
+
+  .headphones{
+    margin-top: 85px;
+  }
+  .caption > div:nth-child(1){
+    align-items: center;
+    text-align: center;
+  }
+
+}
+
+@media (max-width:385px) {
+
+    .headphones-view > span:nth-child(3){
+    scale: 0.5;
+  }
+   .headphones-view > span:nth-child(2){
+    top:60px;
+  }
+  .headphones-view > span:nth-child(4){
+    bottom:60px;
+  }
+
+  .hidden-nav > span{
+    font-size: 1.8rem;
   }
 }
