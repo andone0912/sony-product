@@ -425,7 +425,14 @@ footer{
   }
 
   .headphones-view{
-    width: 100%;
+    width: 95%;
+    margin: 0 auto 0 auto;
+  
+  }
+
+  .headphones-view > span:nth-child(3) > img{ 
+    max-width: 100%;
+    height: auto;
   }
 
   .preview-container{
@@ -556,17 +563,6 @@ footer{
     gap: 10px;
     margin-bottom: 20px;
   }
-  .headphones-view > span:nth-child(3){
-    scale: 0.8;
-  }
-  .headphones-view > span:nth-child(2){
-    position: relative;
-    top:30px;
-  }
-  .headphones-view > span:nth-child(4){
-    position: relative;
-    bottom:30px;
-  }
   
   .description-container{
     margin: 80px auto 0 auto;
@@ -593,9 +589,6 @@ footer{
 /*picture tweaks*/
 @media (max-width:510px) {
 
-  .headphones-view > span:nth-child(3){
-    scale: 0.7;
-  }
 
   .headphones-view{
     gap: 5px;
@@ -603,20 +596,6 @@ footer{
 }
 
 @media (max-width:440px) {
-  .headphones-view > span:nth-child(3){
-    scale: 0.6;
-  }
-
-   .headphones-view > span:nth-child(2), .headphones-view > span:nth-child(4){
-    scale: 0.9;
-  }
-
-   .headphones-view > span:nth-child(2){
-    top:40px;
-  }
-  .headphones-view > span:nth-child(4){
-    bottom:40px;
-  }
 
   .caption > div:nth-child(2){
     display: none;
@@ -637,17 +616,6 @@ footer{
 }
 
 @media (max-width:385px) {
-
-    .headphones-view > span:nth-child(3){
-    scale: 0.5;
-  }
-   .headphones-view > span:nth-child(2){
-    top:60px;
-  }
-  .headphones-view > span:nth-child(4){
-    bottom:60px;
-  }
-
   .hidden-nav > span{
     font-size: 1.8rem;
   }
