@@ -13,7 +13,7 @@
   <div class="page-container">
     <div class="wrapper">
       <header>
-      <aside class="hero">
+      <div class="hero">
         <div class="hero-content">
           <div class="navigation-mobile">
             <div class="title">
@@ -21,9 +21,9 @@
               <h2>Feel The Music</h2>
             </div>
             <nav class="hidden-nav">
-              <span>SERVICES</span>
-              <span>PRODUCTS</span>
-              <span>SHOP NOW</span>
+              <a href="#">SERVICES</a>
+              <a href="#">PRODUCTS</a>
+              <a href="#">SHOP NOW</a>
             </nav>
           </div>
           <div class="description-container">
@@ -38,19 +38,24 @@
             </div>
           </div>
           <div class="watch-video">
-            <span>Watch Video</span>
-            <span> <img src="./images/big-arrow-right.svg" alt="arrow, pointing to the right"></span>
+            <a href="https://www.youtube.com/watch?v=IrHNqd0poGM&ab_channel=SonyEurope">
+              <span>Watch Video</span>
+              <span>
+                <svg width="27" height="24" aria-hidden="true">
+                  <use href="./images/icons.svg#big-arrow-right"></use>
+                </svg>
+              </span>
+            </a>
           </div>
         </div>
-      </aside>
-      
+      </div>
       </header>
       <main>
-        <div class="content-right">
+        <aside class="content-right">
           <nav>
-            <span>SERVICES</span>
-            <span>PRODUCTS</span>
-            <span>SHOP NOW</span>
+            <a href="#">SERVICES</a>
+            <a href="#">PRODUCTS</a>
+            <a href="#">SHOP NOW</a>
           </nav>
           <section class="headphones">
             <div class="caption">
@@ -59,16 +64,34 @@
                 <span>BASS BOOSTED HEADPHONES</span>
               </div>
               <div>
-                <span><img src="./images/plus-icon.svg" alt="a plus icon"></span>
-                <span><img src="./images/minus-icon.svg" alt="a minus icon"></span>
+                <span>
+                  <svg width="30" height="30" aria-hidden="true">
+                    <use href="./images/icons.svg#plus-icon"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg width="30" height="30" aria-hidden="true">
+                    <use href="./images/icons.svg#minus-icon"></use>
+                  </svg>
+                </span>
               </div>
             </div>
             <div class="headphones-view">
-              <span><img src="./images/small-arrow-left.svg" alt="small arrow, pointing to the left"></span>
+              <span>
+                <svg width="14" height="28" aria-hidden="true">
+                  <use href="./images/icons.svg#small-arrow-left"></use>
+                </svg>
+              </span>
               <span class="hidden-pictures"><img src="./images/headphones-left.png" alt="a preview of the headphones on the left"></span>
-              <span><img src="./images/headphones-image.png" alt="the big photo showing the look of the headphones"></span>
+              <span>
+               <img src="./images/headphones-image.png" alt="the big photo showing the look of the headphones">
+              </span>
               <span class="hidden-pictures"><img src="./images/headphones-right.png" alt="a preview of the headphones on the right"></span>
-              <span><img src="./images/small-arrow-right.svg" alt="a small arrow, pointing to the right"></span>
+              <span>
+                <svg width="14" height="28" aria-hidden="true">
+                  <use href="./images/icons.svg#small-arrow-right"></use>
+                </svg>
+              </span>
             </div>
             <div class="preview-container">
              <span class="headphone-preview-left"><img src="./images/headphones-left.png" alt="a preview of the headphones on the left"></span>
@@ -81,14 +104,13 @@
               </div>
             </div>
           </section>
-        </div>
-      </div>
+        </aside>
       </main>
+      </div>
     </div>
     <footer>
        <p>© 2025 Darius Andone. This is a personal project created for educational purposes only. Not affiliated with Sony.</p>
     </footer>
-  </div>
   <script src="./product-page.js"></script>
 </body>
 

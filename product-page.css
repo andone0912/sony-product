@@ -47,14 +47,16 @@ nav{
   gap: 23px;
 }
 
-nav > span{
+nav > a{
   width: 193px;
+  text-decoration: none;
   height: 63px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #C0BBFF;
   border-radius: 4rem;
+  color: #000;
   font-family: "Lato", sans-serif;
   font-size: 2rem;
 
@@ -229,17 +231,25 @@ h2{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.watch-video > a{
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 
 
-.watch-video > span:nth-child(1){
+.watch-video > a > span:nth-child(1){
   font-family: "Lato", sans-serif;
   font-size: 2rem;
   margin-left: 4px;
 
 }
-.watch-video > span:nth-child(2){
+.watch-video > a > span:nth-child(2){
   width: 40px;
   height: 40px;
   background-color: white;
@@ -393,7 +403,7 @@ footer{
 
   }
 
-  .watch-video > span:nth-child(2){
+  .watch-video > a > span:nth-child(2){
     transform: rotate(90deg);
   }
 
@@ -425,7 +435,7 @@ footer{
   }
 
   .headphones-view{
-    width: 95%;
+    width: 100%;
     margin: 0 auto 0 auto;
   
   }
@@ -455,7 +465,7 @@ footer{
   }
 
   
-  nav > span{
+  nav > a{
     width:28%;
   }
 
@@ -476,7 +486,7 @@ footer{
     justify-content: space-around;
   }
 
-  .hidden-nav > span{
+  .hidden-nav > a{
     width: 32.5%;
     border-radius: 5px;
   }
@@ -493,6 +503,7 @@ footer{
   .headphones-view{
     flex-direction: column;
     align-items: center;
+    width: 95%;
     margin-top: 40px;
     gap: 20px;
   }
@@ -587,13 +598,6 @@ footer{
 }
 
 /*picture tweaks*/
-@media (max-width:510px) {
-
-
-  .headphones-view{
-    gap: 5px;
-  }
-}
 
 @media (max-width:440px) {
 
@@ -613,10 +617,8 @@ footer{
     text-align: center;
   }
 
-}
-
-@media (max-width:385px) {
-  .hidden-nav > span{
+  .hidden-nav > a{
     font-size: 1.8rem;
   }
+
 }
