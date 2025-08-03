@@ -104,6 +104,7 @@ nav > a{
 .caption > div:nth-child(2) > span:nth-child(1){
   height: 79px;
   display: flex;
+  border-radius: 1rem 1rem 0 0;
   justify-content: center;
   align-items: center;
   padding-bottom: 3px;
@@ -113,6 +114,7 @@ nav > a{
   height: 80px;
   border-top: 1px solid #A6A5A7;
   display: flex;
+  border-radius: 0 0 1rem 1rem;
   justify-content: center;
   align-items: center;
   padding-top: 5px;
@@ -231,6 +233,7 @@ h2{
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 }
 
 .watch-video > a{
@@ -343,6 +346,61 @@ footer{
   justify-content: center;
 }
 
+nav > a:hover{
+  border: #000 1px solid;
+  background-color: #9288FF;
+  transition: 0.1s;
+}
+
+.title:hover{
+  scale: 1.05;
+  transform: translateX(10px);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.watch-video:hover{
+  background-color: #C0BBFF;
+  border: #000 1px solid;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.caption > div:nth-child(2) > span:nth-child(1):hover, .caption > div:nth-child(2) > span:nth-child(2):hover{
+  border: #888 solid 1px;
+  cursor: pointer;
+  transition: 0.2s;
+} 
+.caption > div:nth-child(2) > span:nth-child(1):hover > svg, .caption > div:nth-child(2) > span:nth-child(2):hover > svg{
+  scale: 1.1; 
+  transition: 0.2s;
+}
+
+.vertical-bar:hover{
+  border: #ffffff 1px solid;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+ .vertical-bar:hover > div{
+  border-top: 1px #ffffff solid;
+  transform: translateX(-1px);
+ }
+
+ .headphones-view > span:nth-child(1):hover{
+  border: #000 1px solid;
+  border-left: none;
+  transition: 0.1s;
+  cursor: pointer;
+ }
+
+ .headphones-view > span:nth-child(5):hover{
+  border: #000 1px solid;
+  border-right: none;
+  transition: 0.1s;
+  cursor: pointer;
+ }
+
 @media (min-width:1440px) {
   .wrapper{
     width: 1440px;
@@ -355,6 +413,7 @@ footer{
   .page-container{
     margin: 0px;
   }
+ 
 
   header{
     width:100%;
@@ -455,7 +514,20 @@ footer{
 
   .preview-container > span:nth-child(1){
   left: 30px;
-}
+  }
+
+  nav > a:hover{
+    border: #ffffff 1px solid;
+    background-color: #d7d4ff;
+    transition: 0.1s;
+  }
+
+  .title:hover{
+    scale: 1.05;
+    transform: translateX(0px);
+    transition: 0.3s;
+    cursor: pointer;
+  }
 }
 
 /* Tablet*/ 
@@ -514,11 +586,11 @@ footer{
     margin: 0;
     width: 57px;
     background-color: #ffffff;
-    border: #C0BBFF 3px solid;
+    border: #000000 1px solid;
   }
 
   .headphones-view > span:nth-child(2), .headphones-view > span:nth-child(3), .headphones-view > span:nth-child(4){
-    border: #C0BBFF solid 3px;
+    border: #000000 solid 1px;
     border-radius: 30px;
   }
   .headphones-view > span:nth-child(3) > img{
@@ -552,6 +624,14 @@ footer{
   footer{
     text-align: center;
   }
+
+  .headphones-view > span:nth-child(1):hover, .headphones-view > span:nth-child(5):hover{
+    background-color: #C0BBFF;
+    transition: 0.2s;
+    border: #000 1px solid;
+  }
+
+  
   
 }
 /*Small Mobile*/
@@ -591,9 +671,6 @@ footer{
     margin: 0;
   }
   
-  .hide{
-    display: none;
-  }
 
 }
 
@@ -603,6 +680,10 @@ footer{
 
   .caption > div:nth-child(2){
     display: none;
+  }
+
+  .information > div > span{
+    font-size: 2.2rem;
   }
 
   .caption{
