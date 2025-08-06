@@ -70,6 +70,7 @@ nav > a{
 .caption{
   display: flex;
   width: 664px;
+  height: 160px;
   justify-content: space-between;
 }
 
@@ -97,11 +98,16 @@ nav > a{
   flex-direction: column;
   width: 54px;
   height: 159px;
-  background-color: #C0BBFF;
   border-radius: 1rem;
 
 }
-.caption > div:nth-child(2) > span:nth-child(1){
+.caption > div:nth-child(2) > button{
+  border: none;
+  padding: none;
+  background-color: #C0BBFF;
+}
+
+.caption > div:nth-child(2) > button:nth-child(1){
   height: 79px;
   display: flex;
   border-radius: 1rem 1rem 0 0;
@@ -110,7 +116,7 @@ nav > a{
   padding-bottom: 3px;
 
 }
-.caption > div:nth-child(2) > span:nth-child(2){
+.caption > div:nth-child(2) > button:nth-child(2){
   height: 80px;
   border-top: 1px solid #A6A5A7;
   display: flex;
@@ -118,6 +124,15 @@ nav > a{
   justify-content: center;
   align-items: center;
   padding-top: 5px;
+}
+
+.information{
+    opacity: 0;
+    height: 0;
+    color: #282828;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem;
+    max-width: 277px;
 }
 .hero{
   width: 716px;
@@ -310,7 +325,7 @@ h2{
   left: 5px;
 }
 
-.information{
+.paragraphs{
   width: 724px;
   position: relative;
   bottom: 49px;
@@ -319,20 +334,20 @@ h2{
   align-items: center;
 }
 
-.information > div{
+.paragraphs > div{
   display: flex;
   flex-direction: column;
   margin-right: 5px;
 }
 
-.information > div > span{
+.paragraphs > div > span{
   font-family: "Sansation", sans-serif;
   font-size: 2.4rem;
   font-style: italic;
   font-weight: bold;
 }
 
-.information > div > span:nth-child(2){
+.paragraphs > div > span:nth-child(2){
   color: #3B2DDE;
 }
 
@@ -366,27 +381,30 @@ nav > a:hover{
   cursor: pointer;
 }
 
-.caption > div:nth-child(2) > span:nth-child(1):hover, .caption > div:nth-child(2) > span:nth-child(2):hover{
+.caption > div:nth-child(2) > button:nth-child(1):hover, .caption > div:nth-child(2) > button:nth-child(2):hover{
   border: #888 solid 1px;
   cursor: pointer;
   transition: 0.2s;
 } 
-.caption > div:nth-child(2) > span:nth-child(1):hover > svg, .caption > div:nth-child(2) > span:nth-child(2):hover > svg{
+.caption > div:nth-child(2) > button:nth-child(1):hover > svg, .caption > div:nth-child(2) > button:nth-child(2):hover > svg{
   scale: 1.1; 
   transition: 0.2s;
 }
 
 .vertical-bar:hover{
   border: #ffffff 1px solid;
-  transition: 0.2s;
+  transition: 0.1s;
   cursor: pointer;
 }
 
  .vertical-bar:hover > div{
-  border-top: 1px #ffffff solid;
+  border: 1px #C0BBFF solid;
+  border-top: none;
   transform: translateX(-1px);
+  transition: 0.1s;
  }
 
+ 
  .headphones-view > span:nth-child(1):hover{
   border: #000 1px solid;
   border-left: none;
@@ -508,7 +526,7 @@ nav > a:hover{
     width: 83.28%;
   }
 
-  .information{
+  .paragraphs{
     width: 100%;
   }
 
@@ -615,7 +633,7 @@ nav > a:hover{
     display: none;
   }
 
-  .information{
+  .paragraphs{
     position:initial;
     bottom: 0px;
     margin: 25px 0 25px 0;
@@ -682,7 +700,7 @@ nav > a:hover{
     display: none;
   }
 
-  .information > div > span{
+  .paragraphs > div > span{
     font-size: 2.2rem;
   }
 
