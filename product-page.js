@@ -84,11 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
     banner.style.bottom = "10px";
     banner.style.left = "50%";
     banner.style.transform = "translateX(-50%)";
-    banner.style.backgroundColor = "#ffcc00";
+    banner.style.backgroundColor = "#686868ff";
     banner.style.color = "#000";
     banner.style.padding = "10px 20px";
     banner.style.borderRadius = "8px";
     banner.style.fontSize = "14px";
+    banner.style.width = "100%"
     banner.style.zIndex = "9999";
     banner.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
     document.body.appendChild(banner);
