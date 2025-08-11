@@ -5,10 +5,6 @@
   /*outline: 2px solid rgba(255, 0, 0, 0.2)*/
 }
 
-:root {
-  color-scheme: light;
-}
-
 html{
   font-size: 62.5%;
   overflow-x: hidden;
@@ -17,6 +13,10 @@ html{
 body{
   overflow-x: hidden;
   background-color: #ebe8e8;
+}
+
+header{
+  z-index: 4;
 }
 
 .page-container{
@@ -34,7 +34,7 @@ body{
   max-width:1440px ;
   min-height: 1024px;
   background-color: #ffffff;
-  border-radius: 3rem 1rem 1rem 1rem;
+  border-radius: 3rem;
 }
 
 .hidden-nav{
@@ -84,7 +84,7 @@ nav > a{
   flex-direction: column;
   gap: 11px;
 }
-.caption > div:nth-child(1) > span:nth-child(1){
+.two{
   font-family: "Sansation", sans-serif;
   font-size: 5rem;
   color: #282828;
@@ -105,9 +105,9 @@ nav > a{
   border-radius: 1rem;
 
 }
-.caption > div:nth-child(2) > button{
+.plus-button, .minus-button{
   border: none;
-  padding: none;
+  padding: 0;
   background-color: #C0BBFF;
 }
 
@@ -120,7 +120,7 @@ nav > a{
   padding-bottom: 3px;
 
 }
-.caption > div:nth-child(2) > button:nth-child(2){
+.minus-button{
   height: 80px;
   border-top: 1px solid #A6A5A7;
   display: flex;
@@ -390,12 +390,12 @@ nav > a:hover{
   cursor: pointer;
 }
 
-.caption > div:nth-child(2) > button:nth-child(1):hover, .caption > div:nth-child(2) > button:nth-child(2):hover{
+.plus-button:hover, .minus-button:hover{
   border: #888 solid 1px;
   cursor: pointer;
   transition: 0.2s;
 } 
-.caption > div:nth-child(2) > button:nth-child(1):hover > svg, .caption > div:nth-child(2) > button:nth-child(2):hover > svg{
+.plus-button:hover > svg, .minus-button:hover > svg{
   scale: 1.1; 
   transition: 0.2s;
 }
@@ -697,6 +697,19 @@ nav > a:hover{
     transform: rotate(90deg);
     margin: 0;
   }
+  
+  .caption{
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    height: 270px;
+    background-color: #282828;
+    width: 95%;
+    margin:  0 auto 0 auto;
+  }
+
   .caption > div:nth-child(1){
     align-items: center;
     text-align: center;
@@ -745,23 +758,15 @@ nav > a:hover{
     transition: opacity 0.3s ease;
   }
 
+  .information{
+    color: #888;
+  }
+
   .icon-wrapper >.plus-icon{
     opacity: 1;
     pointer-events: auto;
   }
 
-  .caption{
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem;
-    height: 220px;
-    background-color: #282828;
-    width: 95%;
-    margin:  0 auto 0 auto;
-  }
-  
   .hidden-toggle-btn:hover{
     cursor: pointer;
     color: #C4C4C4;
@@ -787,5 +792,79 @@ nav > a:hover{
   }
 
  
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+  body{
+    background-color: #3d3d3d;
+  }
+
+  .wrapper{
+    background-color: #1d1d1d;
+  }
+  
+
+  nav > a, .hero, .vertical-bar > div, .headphones-view > span:nth-child(1), .headphones-view > span:nth-child(5), .plus-button, .minus-button{
+    background-color: #9288FF;
+
+  }
+
+  .paragraphs > div > span:first-child, .two{
+    color: #ffffff;
+  }
+
+  .paragraphs > div > span:nth-child(2), .caption > div:nth-child(1) > span:nth-child(2){
+    color: #9288FF;
+  }
+
+  .information{
+    color: #888888;
+  }
+
+  .watch-video{
+      background-color: #766ecc;
+      
+  }
+
+  .watch-video:hover{
+    background-color: #9c93fa;
+    transition: 0.2s;
+  }
+
+  .watch-video:hover , nav > a:hover, .plus-button:hover, .minus-button:hover{
+    border: #ffffff 1px solid;
+    transition: 0.2s;
+  }
+
+  .headphones-view > span:nth-child(1):hover, .headphones-view > span:nth-child(5):hover{
+    border: 1px solid #ffffff;
+    transition: 0.2s;
+  }
+
+  .headphones-view > span:nth-child(1):hover{
+    border-left: none;
+  }
+
+  .headphones-view > span:nth-child(5):hover{
+    border-right: none;
+  }
+
+
+  @media (max-width: 768px) {
+    .headphones-view > span:nth-child(1), .headphones-view > span:nth-child(5) {
+      background-color: #1d1d1d;
+      color: #888;
+      border-color: #888;
+    }
+
+    .headphones-view > span:nth-child(1):hover, .headphones-view > span:nth-child(5):hover{
+    background-color: #1d1d1d;
+    border: 1px solid #ffffff;
+    scale: 1.1;
+    transition: 0.3s;
+    }
+  }
 
 }

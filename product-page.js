@@ -39,7 +39,7 @@ function toggleInformation() {
   if (isOpen) {
     gsap.fromTo(".information",
       { opacity: 1, y: 0 },
-      { duration: 1, y: 200, opacity: 0, ease: "power2.out", color:"#282828"}
+      { duration: 1, y: 200, opacity: 0, ease: "power2.out"}
     );
 
     gsap.to(".two", { duration: 0.8, x: 0, y:0, fontSize: "5rem", ease: "power2.inOut" });
@@ -57,7 +57,7 @@ function toggleInformation() {
 
   gsap.fromTo(".information",
     { y: 200, opacity: 0 },
-    { duration: 1, opacity: 1, y: -40, ease: "power2.out", color:"#888"}
+    { duration: 1, opacity: 1, y: -40, ease: "power2.out"}
   );
 
   gsap.to(".two", { duration: 1, x: 0, y:-40, fontSize: "3.5rem", ease: "power2.inOut" });
