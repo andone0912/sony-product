@@ -193,9 +193,13 @@ h2{
 .vertical-bar{
   width: 8px;
   height: 156px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  z-index: 10;
   background-color: #C4C4C4;
   border-radius: 2rem;
-  padding-top: 75px;
+  /*padding-top: 75px;*/
   margin-right:87px ;
   margin-bottom: 5px;
 
@@ -208,7 +212,11 @@ h2{
   border-radius: 2rem;
 }
 
-.description > p:nth-child(1){
+.description{
+  position: relative;
+}
+
+.description > div > p:nth-child(1){
   color:#ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 4.8rem;
@@ -219,17 +227,17 @@ h2{
   line-height: 70px;
 }
 
-.description > p:nth-child(2){
+.description > div > p:nth-child(2){
   font-family: "Poppins", sans-serif;
   color: #9288FF;
   font-size: 4.8rem;
   height: 72px;
-  width: 201px;
+  width:fit-content;
   margin-bottom: 24px;
   font-weight: 500;
 }
 
-.description > p:nth-child(3){
+.description > div > p:nth-child(3){
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -241,7 +249,7 @@ h2{
   margin-bottom:46px ;
 }
 
-.description > p:nth-child(4){
+.description > div > p:nth-child(4){
   color:#ffffff;
   font-family: "Sansation", sans-serif;
   font-style: italic;
@@ -250,6 +258,14 @@ h2{
   width: 71px;
   height: 34px;
 }
+
+.page-two{
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  height: 0;
+}
+
 
 .watch-video{
   width: 242px;
@@ -404,32 +420,26 @@ nav > a:hover{
 }
 
 .vertical-bar:hover{
-  border: #ffffff 1px solid;
-  transition: 0.1s;
   cursor: pointer;
+  scale: 1.05;
+  transition: 0.2s;
 }
 
- .vertical-bar:hover > div{
-  border: 1px #C0BBFF solid;
-  border-top: none;
-  transform: translateX(-1px);
-  transition: 0.1s;
- }
 
  
- .headphones-view > span:nth-child(1):hover{
+.headphones-view > span:nth-child(1):hover{
   border: #000 1px solid;
   border-left: none;
   transition: 0.1s;
   cursor: pointer;
- }
+}
 
- .headphones-view > span:nth-child(5):hover{
+.headphones-view > span:nth-child(5):hover{
   border: #000 1px solid;
   border-right: none;
   transition: 0.1s;
   cursor: pointer;
- }
+}
 
 @media (min-width:1440px) {
   .wrapper{
@@ -691,7 +701,7 @@ nav > a:hover{
 
   }
 
-  .description-container > .description > p{
+  .description-container > .description > div > p{
     width: 100%;
     text-align: center;
     height: fit-content;
