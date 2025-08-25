@@ -1,10 +1,12 @@
 
 const plusButton = document.querySelector(".plus-button");
 const minusButton = document.querySelector(".minus-button");
-const toggleButton = document.querySelector(".hidden-toggle-btn")
-const plusIcon = document.querySelector(".plus-icon")
-const minusIcon = document.querySelector(".minus-icon")
-const verticalBar = document.querySelector(".vertical-bar")
+const toggleButton = document.querySelector(".hidden-toggle-btn");
+const plusIcon = document.querySelector(".plus-icon");
+const minusIcon = document.querySelector(".minus-icon");
+const verticalBar = document.querySelector(".vertical-bar");
+const arrowLeft = document.querySelector(".arrow-left");
+const arrowRight = document.querySelector(".arrow-right");
 const mm = gsap.matchMedia();
 
 document.querySelector(".page-two").style.position = "absolute";
@@ -13,9 +15,11 @@ document.querySelector(".page-two").style.top = "0px";
 plusButton.addEventListener("click", expandFunction);
 minusButton.addEventListener("click", minimizeFunction);
 toggleButton.addEventListener("click", toggleInformation);
-
+arrowRight.addEventListener("click", moveRight);
+arrowLeft.addEventListener("click", moveLeft);
 let isOpen = false;
 let pageTwo = false;
+
 
 function expandFunction() {
   if (isOpen) return;
@@ -90,6 +94,7 @@ mm.add("(min-width: 640px)", () => {
   const verticalBar = document.querySelector(".vertical-bar");
 
   function scrollHeroDesktop() {
+    gsap.killTweensOf(".page-one, .page-two, .vertical-bar > div");
     if (pageTwo) {
       gsap.to(".vertical-bar > div", { y: 0, duration: 0.5, ease: "power2.inOut" });
       gsap.fromTo(".page-one",
@@ -124,6 +129,7 @@ mm.add("(max-width: 639px)", () => {
   const verticalBar = document.querySelector(".vertical-bar");
 
   function scrollHeroMobile() {
+    gsap.killTweensOf(".page-one, .page-two, .vertical-bar > div");
     if (pageTwo) {
       gsap.to(".vertical-bar > div", { x:0, y:0, duration: 0.5, ease: "power2.inOut" });
       gsap.fromTo(".page-one", 
@@ -151,7 +157,78 @@ mm.add("(max-width: 639px)", () => {
   };
 });
 
+const previews1 = [
+  "./images/headphones-left.png",
+  "./images/headphones-right.png",
+  "./images/center-preview.png"
+]
 
+const previews2 = [
+  "./images/headphones-right.png",
+  "./images/center-preview.png",
+  "./images/headphones-left.png"
+]
+
+
+const images = [
+  "./images/headphones-image.png",
+  "./images/headphone-image2.png",
+  "./images/headphone-image1.png"
+];
+
+
+
+let current = 0;
+let current2 = 0;
+let current3 = 0; 
+
+
+function moveRight() {
+  current = (current + 1) % images.length;
+  current2 = (current2 + 1) % previews1.length;
+  current3 = (current3 + 1) % previews2.length;
+
+  const tl = gsap.timeline({
+    onComplete: () => {
+      document.querySelector(".center-image > img").src = images[current];
+      document.querySelector(".headphone-preview-left > img").src = previews1[current2];
+      document.querySelector(".headphone-preview-right > img").src = previews2[current3];
+    }
+  });
+
+  tl.to(".headphone-preview-left", { opacity: 0, scale: 0.9, x: 20, duration: 0.3 })
+    .to(".center-image", { opacity: 0, scale: 0.9, x: 30, duration: 0.3}, "-=0.25")
+    .to(".headphone-preview-right", { opacity: 0, scale: 0.9, x: 20, duration: 0.3 }, "-=0.25")
+    .add(() => {
+      gsap.fromTo(".center-image", { opacity: 0, scale: 1.1, x: -30 }, { opacity: 1, scale: 1, x: 0, duration: 0.3 });
+      gsap.fromTo(".headphone-preview-left", { opacity: 0, scale: 1.1, x: -20 }, { opacity: 1, scale: 1, x: 0, duration: 0.3, delay: 0.1 });
+      gsap.fromTo(".headphone-preview-right", { opacity: 0, scale: 1.1, x: -20 }, { opacity: 1, scale: 1, x: 0, duration: 0.3, delay: 0.2 });
+    });
+}
+
+
+function moveLeft() {
+  current = (current - 1 + images.length) % images.length;
+  current2 = (current2 - 1 + previews1.length) % previews1.length;
+  current3 = (current3 - 1 + previews2.length) % previews2.length;
+
+  const tl = gsap.timeline({
+    onComplete: () => {
+      document.querySelector(".center-image > img").src = images[current];
+      document.querySelector(".headphone-preview-left > img").src = previews1[current2];
+      document.querySelector(".headphone-preview-right > img").src = previews2[current3];
+    }
+  });
+
+  tl.to(".headphone-preview-right", { opacity: 0, scale: 0.9, x: 20, duration: 0.3 })
+    .to(".center-image", { opacity: 0, scale: 0.9, x: 30, duration: 0.3}, "-=0.25")
+    .to(".headphone-preview-left", { opacity: 0, scale: 0.9, x: 20, duration: 0.3 }, "-=0.25")
+    .add(() => {
+      gsap.fromTo(".center-image", { opacity: 0, scale: 1.1, x: -30 }, { opacity: 1, scale: 1, x: 0, duration: 0.3 });
+      gsap.fromTo(".headphone-preview-left", { opacity: 0, scale: 1.1, x: -20 }, { opacity: 1, scale: 1, x: 0, duration: 0.3, delay: 0.1 });
+      gsap.fromTo(".headphone-preview-right", { opacity: 0, scale: 1.1, x: -20 }, { opacity: 1, scale: 1, x: 0, duration: 0.3, delay: 0.2 });
+    });
+}
 
 
 

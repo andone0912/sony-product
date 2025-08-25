@@ -333,9 +333,6 @@ h2{
   width: 64px;
 }
 
-.hidden-pictures{
-  display: none;
-}
 
 .preview-container{
   display: flex;
@@ -351,6 +348,16 @@ h2{
 
 .preview-container > span:nth-child(2){
   left: 5px;
+}
+
+.headphone-preview-left{
+  border-radius: 30px;
+}
+
+
+
+.hidden-pictures{
+  display: none;
 }
 
 .paragraphs{
@@ -539,11 +546,6 @@ nav > a:hover{
   
   }
 
-  .headphones-view > span:nth-child(3) > img{ 
-    max-width: 100%;
-    height: auto;
-  }
-
   .preview-container{
     width: 83.28%;
   }
@@ -551,7 +553,6 @@ nav > a:hover{
   .paragraphs{
     width: 100%;
   }
-
   .preview-container > span:nth-child(1){
   left: 30px;
   }
@@ -638,11 +639,16 @@ nav > a:hover{
   }
 
 
-  .headphones-view > span:nth-child(1){
+  .headphones > .headphones-view > span:nth-child(1){
     padding-left: 15px;
   }
-  .headphones-view > span:nth-child(5){
+  .headphones > .headphones-view > span:nth-child(5){
     padding-right: 10px;
+  }
+
+  .headphones-view > span:nth-child(3) > img{ 
+    max-width: 100%;
+    height: auto;
   }
 
   .hidden-pictures{
