@@ -98,7 +98,7 @@ mm.add("(min-width: 640px)", () => {
     if (pageTwo) {
       gsap.to(".vertical-bar > div", { y: 0, duration: 0.5, ease: "power2.inOut" });
       gsap.fromTo(".page-one",
-         { y: -200, x:0, opacity: 0},
+         { y: -140, x:0, opacity: 0},
          { y: 0, x:0, opacity: 1, duration: 0.9, ease: "power2.inOut" }
         );
       gsap.to(".page-two", { opacity: 0, y: 300, duration: 0.5, ease: "power2.inOut" });
@@ -107,7 +107,7 @@ mm.add("(min-width: 640px)", () => {
       gsap.to(".vertical-bar > div", { y: -75, duration: 0.5, ease: "power2.inOut" });
       gsap.to(".page-one", { y: -100, x:0 ,opacity: 0, duration: 0.5, ease: "power2.inOut" });
       gsap.fromTo(".page-two", 
-        { opacity: 0, y: 400, x:0, duration: 0.9, ease: "power2.inOut" },
+        { opacity: 0, y: 250, x:0, duration: 0.9, ease: "power2.inOut" },
         { opacity: 1, y: 0, x:0, duration: 0.9, ease: "power2.inOut"}
       );
       pageTwo = true;
@@ -220,13 +220,13 @@ function moveLeft() {
     }
   });
 
-  tl.to(".headphone-preview-right", { opacity: 0, scale: 0.9, x: 20, duration: 0.3 })
-    .to(".center-image", { opacity: 0, scale: 0.9, x: 30, duration: 0.3}, "-=0.25")
-    .to(".headphone-preview-left", { opacity: 0, scale: 0.9, x: 20, duration: 0.3 }, "-=0.25")
+  tl.to(".headphone-preview-right", { opacity: 0, scale: 0.9, x: -20, duration: 0.3 })
+    .to(".center-image", { opacity: 0, scale: 0.9, x: -30, duration: 0.3}, "-=0.25")
+    .to(".headphone-preview-left", { opacity: 0, scale: 0.9, x: -20, duration: 0.3 }, "-=0.25")
     .add(() => {
-      gsap.fromTo(".center-image", { opacity: 0, scale: 1.1, x: -30 }, { opacity: 1, scale: 1, x: 0, duration: 0.3 });
-      gsap.fromTo(".headphone-preview-left", { opacity: 0, scale: 1.1, x: -20 }, { opacity: 1, scale: 1, x: 0, duration: 0.3, delay: 0.1 });
-      gsap.fromTo(".headphone-preview-right", { opacity: 0, scale: 1.1, x: -20 }, { opacity: 1, scale: 1, x: 0, duration: 0.3, delay: 0.2 });
+      gsap.fromTo(".center-image", { opacity: 0, scale: 1.1, x: 30 }, { opacity: 1, scale: 1, x: 0, duration: 0.3 });
+      gsap.fromTo(".headphone-preview-left", { opacity: 0, scale: 1.1, x: 20 }, { opacity: 1, scale: 1, x: 0, duration: 0.3, delay: 0.1 });
+      gsap.fromTo(".headphone-preview-right", { opacity: 0, scale: 1.1, x: 20 }, { opacity: 1, scale: 1, x: 0, duration: 0.3, delay: 0.2 });
     });
 }
 

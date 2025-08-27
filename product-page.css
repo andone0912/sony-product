@@ -541,20 +541,35 @@ nav > a:hover{
   }
 
   .headphones-view{
-    width: 100%;
+    width: 80%;
     margin: 0 auto 0 auto;
+    border-left:1px #ffffff solid;
+    border-right:1px #ffffff solid;
+    border-radius: 5px;
+    margin: 40px auto 30px auto;
+    box-shadow:
+    -5px 0 5px -5px rgba(255, 255, 255, 0.5) inset, /* Right */
+    5px 0 5px -5px rgba(255, 255, 255, 0.5) inset; /* Left */;
+  }
   
+  .preview-container{
+    display: none;
   }
 
-  .preview-container{
-    width: 83.28%;
+  .headphones > .headphones-view > .arrow-right, .headphones > .headphones-view > .arrow-left{
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    
   }
 
   .paragraphs{
     width: 100%;
+    bottom: 0;
+    margin-bottom: 15px;
   }
   .preview-container > span:nth-child(1){
-  left: 30px;
+    left: 30px;
   }
 
   nav > a:hover{
@@ -562,6 +577,7 @@ nav > a:hover{
     background-color: #d7d4ff;
     transition: 0.1s;
   }
+
 
   .title:hover{
     scale: 1.05;
@@ -577,9 +593,65 @@ nav > a:hover{
     gap: 10%;
   }
 
+   .headphones-view{
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    border:none;
+    box-shadow: none;
+    border-bottom:1px solid #FFFFFF ;
+    border-top: 1px solid #FFFFFF;
+    border-radius: 15px;
+    margin-top: 40px;
+    gap: 10px;
+    box-shadow:
+    0 5px 5px -5px rgba(255, 255, 255, 0.5) inset, /* Right */
+    0 -5px 5px -5px rgba(255, 255, 255, 0.5) inset; /* Left */;
+  }
+  
+  
+  .headphones-view > span:nth-child(1), .headphones-view > span:nth-child(5) {
+    transform: rotate(90deg);
+    margin: 0;
+    width: 57px;
+    background-color: #ffffff;
+    border: #000000 1px solid;
+  }
+
+  .headphones-view > span:nth-child(2), .headphones-view > span:nth-child(3), .headphones-view > span:nth-child(4){
+    border-radius: 30px;
+  }
+  .headphones-view > span:nth-child(3) > img{
+    border-radius: 30px;
+  }
+
+
+  .headphones > .headphones-view > span:nth-child(1){
+    padding-left: 15px;
+  }
+  .headphones > .headphones-view > span:nth-child(5){
+    padding-right: 10px;
+  }
+
+  .headphones-view > span:nth-child(3) > img{ 
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hidden-pictures{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   
   nav > a{
     width:28%;
+  }
+  .headphones-view:active{
+    box-shadow:
+    0 10px 5px -5px rgba(255, 255, 255, 0.5) inset, /* Right */
+    0 -10px 5px -5px rgba(255, 255, 255, 0.5) inset; /* Left */;
   }
 
 }
@@ -613,49 +685,6 @@ nav > a:hover{
     text-align: center;
   }
 
-  .headphones-view{
-    flex-direction: column;
-    align-items: center;
-    width: 95%;
-    margin-top: 40px;
-    gap: 20px;
-  }
-  
-  .headphones-view > span:nth-child(1), .headphones-view > span:nth-child(5) {
-    transform: rotate(90deg);
-    border-radius:50%;
-    margin: 0;
-    width: 57px;
-    background-color: #ffffff;
-    border: #000000 1px solid;
-  }
-
-  .headphones-view > span:nth-child(2), .headphones-view > span:nth-child(3), .headphones-view > span:nth-child(4){
-    border: #000000 solid 1px;
-    border-radius: 30px;
-  }
-  .headphones-view > span:nth-child(3) > img{
-    border-radius: 30px;
-  }
-
-
-  .headphones > .headphones-view > span:nth-child(1){
-    padding-left: 15px;
-  }
-  .headphones > .headphones-view > span:nth-child(5){
-    padding-right: 10px;
-  }
-
-  .headphones-view > span:nth-child(3) > img{ 
-    max-width: 100%;
-    height: auto;
-  }
-
-  .hidden-pictures{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
   .preview-container{
     display: none;
@@ -879,10 +908,8 @@ nav > a:hover{
     }
 
     .headphones-view > span:nth-child(1):hover, .headphones-view > span:nth-child(5):hover{
-    background-color: #1d1d1d;
-    border: 1px solid #ffffff;
-    scale: 1.1;
     transition: 0.3s;
+    background-color: transparent;
     }
   }
 
